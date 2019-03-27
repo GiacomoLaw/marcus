@@ -10,8 +10,23 @@ permalink: /:year/:month/:title/
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-seo-tag
 
-# Exclude from processing.
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# Pages
+paginate: 6 # number of posts per page
+paginate_path: /page:num/
+
+# Exclude from processing when building site locally.
 exclude:
   - Gemfile
   - Gemfile.lock

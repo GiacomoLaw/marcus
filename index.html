@@ -4,8 +4,13 @@ title: Home
 ---
 <div class="posts">
 	<div class="row">
-		{% for post in site.posts %}
+		{% for post in paginator.posts %}
 			{% include post.html %}
 		{% endfor %}
 	</div>
+</div>
+<!-- pages -->
+<hr class="pageseperator">
+<div class="pages">
+    {% include pagination.html %}
 </div>
