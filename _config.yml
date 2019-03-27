@@ -3,7 +3,7 @@ title: "Marcus Jekyll theme"
 description: "The Marcus Jekyll theme."
 logo: 'assets/images/icon.png'
 favicon: 'assets/images/icon.png'
-baseurl: ''
+baseurl: '/marcus'
 permalink: /:year/:month/:title/
 
 # Build settings
