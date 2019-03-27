@@ -10,15 +10,23 @@
 
 .navbar-collapse.collapse.in { display: block!important; }
 
+.headerimage {
+	max-width: 4000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+}
+
 .main-content {
 	min-height:300px;
 }
 
 .site-content {
 	min-height: 60vh;
-	padding-top: 1.5rem;
-	margin-top: 57px;
-	transition: all 0.4s;
+	margin-top: 40px;
 }
 
 .site-title {
@@ -54,4 +62,13 @@
 span.post-date {
 	display:inline-block;
 	color:rgba(0,0,0,.44);
+}
+
+.maxthumb {
+	max-height:300px;
+	overflow:hidden;
+}
+
+.mb-30px {
+	margin-bottom: 30px;
 }

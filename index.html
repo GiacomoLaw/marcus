@@ -3,22 +3,9 @@ layout: default
 title: Home
 ---
 <div class="posts">
-	{% for post in site.posts %}
-	<article class="post">
-		<h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-		<div class="entry">
-			{{ post.excerpt }}
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 text-center text-lg-left">
-					<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-				</div>
-				<div class="col-md-6 col-sm-6 text-center text-lg-right">
-					<span class="post-date">{{ post.date | date_to_string }}</span>
-				</div>
-			</div>
-		</div>
-	</article>
-	{% endfor %}
+	<div class="row">
+		{% for post in site.posts %}
+			{% include post.html %}
+		{% endfor %}
+	</div>
 </div>
