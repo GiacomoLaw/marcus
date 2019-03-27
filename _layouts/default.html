@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }} | {{site.name}}</title>
+	{% seo %}
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- defer loading of non-essential scripts -->
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+	<!-- nav -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top nav-down">
+		<div class="container pr-0">
+			<!-- Logo -->
+			<a class="navbar-brand" href="{{ site.baseurl }}/">
+				<img src="{{ site.baseurl }}/assets/images/icon.png" alt="{{ site.name }}">
+			</a>
+			<!-- Logo -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse">
+				<!-- Begin Menu -->
+				<ul class="navbar-nav ml-auto">
+					{% if page.url == "/" %}
+					<li class="nav-item active">
+						{% else %}
+					<li class="nav-item">
+						{% endif %}
+						<a class="nav-link" href="{{ site.baseurl }}">Home</a>
+					</li>
+					{% if page.url == "/about.html" %}
+					<li class="nav-item active">
+						{% else %}
+					<li class="nav-item">
+						{% endif %}
+						<a class="nav-link" href="{{ site.baseurl }}/about/">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/giacomolaw/marcus" target="_blank"><i class="fab fa-github"></i> Download</a>
+					</li>
+				</ul>
+				<!-- End Menu -->
+			</div>
+		</div>
+	</nav>
+	<!-- nav end -->
+	<!-- site start -->
+	<div class="site-content">
+		<div class="container">
+			<div class="mainheading">
+				<h1 class="sitetitle">{{ site.name }}</h1>
+				<p class="lead">
+					{{ site.description }}
+				</p>
+			</div>
+			<div class="main-content">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 text-center text-lg-left">
+					Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
+				</div>
+				<div class="col-md-6 col-sm-6 text-center text-lg-right">
+					<a target="_blank" href="https://giacomolaw.me">By Giacomo Lawrance</a>.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="{{ site.baseurl }}/assets/js/script.js"></script>
+</body>
+</html>

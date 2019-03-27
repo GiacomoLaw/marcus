@@ -1,0 +1,47 @@
+/*
+	by Giacomo Lawrance
+	https://giacomolaw.me
+ */
+
+.navbar-brand img {
+	max-height:30px;
+	margin-right:5px;
+}
+
+.main-content {
+	min-height:300px;
+}
+
+.site-content {
+	min-height: 60vh;
+	padding-top: 1.5rem;
+	margin-top: 57px;
+	transition: all 0.4s;
+}
+
+.site-title {
+
+}
+
+.footer {
+	border-top:1px solid rgba(0,0,0,.05)!important;
+	padding-top:15px;
+	padding-bottom:12px;
+	font-size:0.8rem;
+	color:rgba(0,0,0,.44);
+	margin-top:50px;
+	margin-bottom:62px;
+	position: relative;
+	background: #fff;
+}
+.posts {
+	margin-top: 30px;
+}
+.post {
+	border-top:1px solid rgba(0,0,0,.05);
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.post-title {
+	margin-top: 10px;
+}
