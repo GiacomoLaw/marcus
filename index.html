@@ -9,7 +9,16 @@ title: Home
 		<div class="entry">
 			{{ post.excerpt }}
 		</div>
-		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 text-center text-lg-left">
+					<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+				</div>
+				<div class="col-md-6 col-sm-6 text-center text-lg-right">
+					<span class="post-date">{{ post.date | date_to_string }}</span>
+				</div>
+			</div>
+		</div>
 	</article>
 	{% endfor %}
 </div>
