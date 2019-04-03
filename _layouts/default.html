@@ -3,6 +3,7 @@
 <head>
 	<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Giacomo Lawrance https://giacomolaw.me">
 	<title>{{ page.title }} | {{site.name}}</title>
 	{% seo %}
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
@@ -53,20 +54,22 @@
 		</div>
 	</nav>
 	<!-- nav end -->
+	<div class="introimage">
+		<picture>
+			<source srcset="{{ site.baseurl }}/assets/images/cover.webp" type="image/webp">
+			<source srcset="{{ site.baseurl }}/assets/images/cover.png" type="image/png">
+			<img src="{{ site.baseurl }}/assets/images/cover.png" class="headerimage" alt="{{site.name}}">
+		</picture>
+		<div class="text-block">
+			<h1 class="sitetitle">{{ site.name }}</h1>
+			<p class="lead">
+				{{ site.description }}
+			</p>
+		</div>
+	</div>
 	<!-- site start -->
-	<picture>
-		<source srcset="{{ site.baseurl }}/assets/images/cover.webp" type="image/webp">
-		<source srcset="{{ site.baseurl }}/assets/images/cover.png" type="image/png">
-		<img src="{{ site.baseurl }}/assets/images/cover.png" class="headerimage" alt="{{site.name}}">
-	</picture>
 	<div class="site-content">
 		<div class="container">
-			<div class="mainheading">
-				<h1 class="sitetitle">{{ site.name }}</h1>
-				<p class="lead">
-					{{ site.description }}
-				</p>
-			</div>
 			<div class="main-content">
 				{{ content }}
 			</div>

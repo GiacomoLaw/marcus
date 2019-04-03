@@ -82,3 +82,28 @@ span.post-date {
 hr .pageseperator {
 	border-top: 1px solid rgba(0,0,0,.05);
 }
+
+.container {
+	position: relative;
+}
+
+.text-block {
+	position: absolute;
+	text-align: center;
+	top: 170px;
+	color: white;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(119, 119, 119, 0.32);
+	padding: 20px;
+	width: 800px;
+}
+
+@media (max-width: 770px) {
+	.siteintro {
+		padding: 10px;
+	}
+	.text-block {
+		width: 90%;
+	}
+}
